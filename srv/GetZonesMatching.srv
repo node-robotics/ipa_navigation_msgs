@@ -1,0 +1,6 @@
+# List of types to return
+# TODO should we expand this to some generic grammar?
+uint8[] types
+---
+# List of zones matching the filter
+NavigationZone[] zones

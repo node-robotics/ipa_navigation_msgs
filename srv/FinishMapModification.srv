@@ -1,0 +1,11 @@
+# Map Modification will finish only if well localized and odometry is available
+uint8 FINISH = 0
+# Discard all changes and exit Map Modification state
+uint8 ABORT = 1
+# Force mapping and finish Map Modification independent of localization confidence, it will fail if no odometry is available
+uint8 FORCE = 2
+
+uint8 action 
+---
+bool success
+string message

@@ -1,0 +1,4 @@
+visualization_msgs/MarkerArray marker_array
+---
+bool success
+string message

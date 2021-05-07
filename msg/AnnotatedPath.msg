@@ -1,0 +1,5 @@
+nav_msgs/Path path
+uuid_msgs/UniqueID zone_at_end
+bool default_grant_at_end
+uuid_msgs/UniqueID zone_at_start
+bool default_grant_at_start

@@ -1,0 +1,21 @@
+string current_case_id
+int32 total_vel_cmds
+int32 valid_trajectories
+int32 invalid_kinematic
+int32 invalid_rate
+int32 invalid_field
+
+int32 field_checks
+bool future_field_violation
+bool current_field_violation
+bool current_rate_violation
+
+float32 poss_rot_cw
+float32 poss_rot_ccw
+float32 poss_rot_atgoal_cw
+float32 poss_rot_atgoal_ccw
+
+bool can_rotate_to_goal_cw
+bool can_rotate_to_goal_ccw
+bool goal_is_feasable
+

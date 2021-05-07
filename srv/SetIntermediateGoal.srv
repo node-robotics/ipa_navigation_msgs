@@ -1,0 +1,12 @@
+# Can use either intersection with line segment (must be exactly 2 points) or distance, if line_segments is empty. Distance summed along the path starting from the robot's current position.
+# The response will contain the pose of the intermediate goal if one was set.
+# If v_max is > 0, controller will be clamped to this v_max or the currently configured v_max, whichever is smaller
+# If no line segment is specified and distance is negative but a positive v_max is specified, only the velocity limit will be applied. This is currently used for crossing zones.
+# Velocity limits are applied until the next goal is reached or the controller is aborted.
+geometry_msgs/PoseStamped[] line_segment
+float64 distance
+float64 v_max
+---
+bool success
+string msg
+geometry_msgs/PoseStamped intermediate_goal

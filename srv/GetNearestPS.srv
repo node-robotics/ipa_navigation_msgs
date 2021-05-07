@@ -1,0 +1,5 @@
+geometry_msgs/PointStamped position
+---
+string[] ids
+string message
+bool success

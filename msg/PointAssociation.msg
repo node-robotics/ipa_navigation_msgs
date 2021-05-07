@@ -1,0 +1,3 @@
+PointFeature measurement
+PointFeature assumption
+float32 confidence

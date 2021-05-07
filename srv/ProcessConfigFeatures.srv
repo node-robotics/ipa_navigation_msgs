@@ -1,0 +1,27 @@
+# Action constants
+uint8 ERASE = 1
+uint8 EXPORT = 2
+uint8 UPDATE_POSITION = 3
+uint8 UPDATE_SOURCE_ID = 4
+uint8 UPDATE_ID = 5
+uint8 UPDATE_DESCRIPTION = 6
+
+# Type constants
+string POINT = point
+string LINE = line
+string POSE = pose
+string POLY = poly
+string RESTRICTED = restricted
+string FREESPACE = freespace
+string NO_MARKER = no_selected_marker
+
+uint8 action 		# the action to be performed on the features
+ipa_navigation_msgs/ConfigFeature cfg_feature_msg	# the feature message
+string[] type		# the types of the features
+string[] file_addr	# the address of the files containing the features
+---
+bool success		# indicates whether the action was successful or not
+string message		# contains the success/error message
+string[] type		# the types of the features
+string[] file_addr	# the address of the files containing the features
+string[] error		# contains individual error messages for each feature type

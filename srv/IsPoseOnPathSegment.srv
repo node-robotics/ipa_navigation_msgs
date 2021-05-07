@@ -1,0 +1,6 @@
+geometry_msgs/PoseStamped pose
+---
+bool is_on_path_segment
+
+bool success
+string message

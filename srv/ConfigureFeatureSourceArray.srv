@@ -1,0 +1,5 @@
+ipa_navigation_msgs/FeatureSourceConfig[] cfgs
+---
+string[] source_ids
+string[] err_msgs
+bool[] success_flags
