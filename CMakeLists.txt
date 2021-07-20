@@ -7,6 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   message_generation
   nav_msgs
+  sensor_msgs
   std_msgs
   uuid_msgs
   visualization_msgs
@@ -22,11 +23,14 @@ add_message_files(
     AreaProperty.msg
     BoundedPath.msg
     CircleFeature.msg
+    CompressedMapImage.msg
     ConfigFeature.msg
     ConfigLine.msg
     ConfigPoint.msg
     ConfigPoly.msg
     ConfigPose.msg
+    Constraint.msg
+    Constraints.msg
     DrawPathSegmentTool.msg
     EBand2.msg
     EBand2Bubble.msg
@@ -141,6 +145,7 @@ generate_messages(DEPENDENCIES
   actionlib_msgs
   geometry_msgs
   nav_msgs
+  sensor_msgs 
   std_msgs
   uuid_msgs
   visualization_msgs
@@ -153,6 +158,7 @@ catkin_package(
     geometry_msgs
     message_runtime
     nav_msgs
+    sensor_msgs 
     std_msgs
     uuid_msgs
     visualization_msgs
