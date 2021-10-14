@@ -1,0 +1,23 @@
+# The environment uuid of the input file
+string infile_uuid
+# The lts2map backup input file name
+string infile_name
+# The environment uuid of the output file
+string outfile_uuid
+# The lts2map backup output file name
+string outfile_name
+# Paramater for the origin transform
+float64 transform_x
+float64 transform_y
+float64 transform_theta
+# Boundingbox (for cropping) paramerter x,y are the coordinates of the bottom-left
+float64 bbox_x
+float64 bbox_y
+float64 bbox_width
+float64 bbox_height
+
+bool crop 
+bool expand
+---
+bool success
+string message
