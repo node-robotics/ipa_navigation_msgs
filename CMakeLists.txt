@@ -111,6 +111,7 @@ add_service_files(
     GetMapFeature.srv
     GetMarkerArray.srv
     GetLTSNGMap.srv
+    GetLTSNGMapImage.srv
     GetNearestPS.srv
     GetObstacleDistance.srv
     GetOccupancyCells.srv
