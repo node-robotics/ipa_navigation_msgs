@@ -122,6 +122,7 @@ add_service_files(
     FinishMapModification.srv
     IsPoseOnPathSegment.srv
     MakeLandmarkShot.srv
+    MapTransform.srv
     PoseRequest.srv
     ProcessConfigFeatures.srv
     RequestSeenCells.srv
