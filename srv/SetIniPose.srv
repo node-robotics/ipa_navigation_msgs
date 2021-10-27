@@ -1,8 +1,8 @@
 float32 x
 float32 y
 float32 theta
-# covariance can consist of 9 or 3 elements
-float32[] covariance
+float32[] covariance # covariance can consist of 9 or 3 elements
+string frame # reference frame of pose and cov. Will fallback to configured map frame if empty
 ---
 bool success
 string message
