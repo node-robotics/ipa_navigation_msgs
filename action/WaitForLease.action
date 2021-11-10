@@ -1,0 +1,7 @@
+# Wait for this uuid to be leased
+std_msgs/String uuid
+std_msgs/Bool auto_lease
+---
+# No result
+---
+# No feedback
