@@ -85,6 +85,7 @@ add_message_files(
     UbiSenseTagList.msg
     PointWithCovarianceStamped.msg
     PointWithCovariance.msg
+    ZoneLease.msg
 )
 
 add_message_files(
@@ -111,6 +112,7 @@ add_service_files(
     GetMapFeature.srv
     GetMarkerArray.srv
     GetLTSNGMap.srv
+    GetLTSNGMapImage.srv
     GetNearestPS.srv
     GetObstacleDistance.srv
     GetOccupancyCells.srv
@@ -139,6 +141,7 @@ add_action_files(
   FILES
     GlobalActionPlanner.action
     MoveBase.action
+    WaitForLease.action
 )
 
 generate_messages(DEPENDENCIES
@@ -146,7 +149,7 @@ generate_messages(DEPENDENCIES
   actionlib_msgs
   geometry_msgs
   nav_msgs
-  sensor_msgs 
+  sensor_msgs
   std_msgs
   uuid_msgs
   visualization_msgs
@@ -159,7 +162,7 @@ catkin_package(
     geometry_msgs
     message_runtime
     nav_msgs
-    sensor_msgs 
+    sensor_msgs
     std_msgs
     uuid_msgs
     visualization_msgs
