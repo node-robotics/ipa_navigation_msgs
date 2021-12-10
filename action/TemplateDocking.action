@@ -1,0 +1,6 @@
+string name
+---
+bool success
+---
+bool found_template
+bool is_docking
