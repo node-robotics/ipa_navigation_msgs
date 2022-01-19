@@ -103,11 +103,13 @@ add_service_files(
   DIRECTORY srv
   FILES
     ClearMapWindow.srv
+    ComputeDiffMap.srv
     ConfigureFeatureSource.srv
     ConfigureFeatureSourceArray.srv
     DeregisterAgent.srv
     GetActiveFeatureSources.srv
     GetCBSConstraints.srv
+    GetDiffMap.srv
     GetMapDiffInit.srv
     GetMapFeature.srv
     GetMarkerArray.srv
