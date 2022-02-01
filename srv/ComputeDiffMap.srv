@@ -1,5 +1,4 @@
 # Get diff maps from lts backups
-string lts_backups_path
 time last_upload_time
 ---
 nav_msgs/OccupancyGrid[] diffmaps

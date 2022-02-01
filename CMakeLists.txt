@@ -109,7 +109,6 @@ add_service_files(
     DeregisterAgent.srv
     GetActiveFeatureSources.srv
     GetCBSConstraints.srv
-    GetDiffMap.srv
     GetMapDiffInit.srv
     GetMapFeature.srv
     GetMarkerArray.srv
@@ -125,6 +124,7 @@ add_service_files(
     InitAgent.srv
     FinishMapModification.srv
     IsPoseOnPathSegment.srv
+    LoadDiffMap.srv
     MakeLandmarkShot.srv
     MapTransform.srv
     PoseRequest.srv
