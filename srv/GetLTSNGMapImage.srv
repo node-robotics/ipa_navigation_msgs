@@ -3,6 +3,7 @@ uint8 LAYER_TYPE_NDT_2D_GRID = 0
 uint8 LAYER_TYPE_HMM_2D_GRID = 1
 uint8 LAYER_TYPE_HR_OCC_2D_GRID = 2
 uint8 LAYER_TYPE_NDT_3D_GRID_SLICE = 3
+uint8 LAYER_TYPE_LW_HR_OCC_2D_GRID = 4
 
 # Temporal type of map: static or long term
 uint8 TEMPORAL_TYPE_LONG_TERM = 0
