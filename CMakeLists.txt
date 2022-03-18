@@ -103,6 +103,7 @@ add_service_files(
   DIRECTORY srv
   FILES
     ClearMapWindow.srv
+    ComputeDiffMap.srv
     ConfigureFeatureSource.srv
     ConfigureFeatureSourceArray.srv
     CreateTemplateImage.srv
@@ -124,6 +125,7 @@ add_service_files(
     InitAgent.srv
     FinishMapModification.srv
     IsPoseOnPathSegment.srv
+    LoadDiffMap.srv
     MakeLandmarkShot.srv
     MapTransform.srv
     PoseRequest.srv
