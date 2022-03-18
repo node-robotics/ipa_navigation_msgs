@@ -106,6 +106,7 @@ add_service_files(
     ComputeDiffMap.srv
     ConfigureFeatureSource.srv
     ConfigureFeatureSourceArray.srv
+    CreateTemplateImage.srv
     DeregisterAgent.srv
     GetActiveFeatureSources.srv
     GetCBSConstraints.srv
@@ -143,6 +144,7 @@ add_action_files(
   FILES
     GlobalActionPlanner.action
     MoveBase.action
+    TemplateDocking.action
     WaitForLease.action
 )
 
