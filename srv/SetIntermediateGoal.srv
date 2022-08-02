@@ -1,11 +1,16 @@
 # Can use either intersection with line segment (must be exactly 2 points) or distance, if line_segments is empty. Distance summed along the path starting from the robot's current position.
+# If use_decel_limits is true and distance used calculate the nearest stop distance and use the maximum of disatnce and stop distance
 # The response will contain the pose of the intermediate goal if one was set.
 # If v_max is > 0, controller will be clamped to this v_max or the currently configured v_max, whichever is smaller
 # If no line segment is specified and distance is negative but a positive v_max is specified, only the velocity limit will be applied. This is currently used for crossing zones.
 # Velocity limits are applied until the next goal is reached or the controller is aborted.
+# If allow_override is true, this intermediate goal can replace other intermediate goals even if the original intermediate goal has the shorter path
+# If use_decel_limits, compute the nearest stop distance based on the decceleration limits and use the max of distance and this stop distance
 geometry_msgs/PoseStamped[] line_segment
 float64 distance
 float64 v_max
+bool allow_override
+bool use_decel_limits
 ---
 bool success
 string msg

@@ -1,0 +1,6 @@
+# Output resolution for OCC_GRID
+string station_name
+---
+ipa_navigation_msgs/CompressedMapImage image
+bool success
+string message

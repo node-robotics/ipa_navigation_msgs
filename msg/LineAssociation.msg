@@ -1,3 +1,0 @@
-LineFeature measurement
-LineFeature assumption
-float32 confidence

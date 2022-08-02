@@ -1,0 +1,6 @@
+# Get diff maps from backups
+string diffmaps_path
+---
+nav_msgs/OccupancyGrid[] diffmaps
+bool success
+string message

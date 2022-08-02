@@ -16,6 +16,6 @@ float64 desired_hr_layer_resolution # unit: [m/cell]
 # Slice for 3D NDT layer
 uint8 slice
 ---
-nav_msgs/OccupancyGrid map
+ipa_navigation_msgs/CompressedMapImage image
 bool success
 string message

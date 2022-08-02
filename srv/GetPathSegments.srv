@@ -1,5 +1,0 @@
-string[] id
----
-PathSegmentList path_segments
-string message
-bool success

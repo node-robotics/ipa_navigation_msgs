@@ -1,9 +1,0 @@
-string id
-string frame_id
-float64 min_vel
-float64 max_vel
-float64 min_radius
-float64 max_radius
-geometry_msgs/Point[] polygon
-float64 safety_margin
-float64 slowdown_margin

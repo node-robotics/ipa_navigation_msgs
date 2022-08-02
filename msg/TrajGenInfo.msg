@@ -18,4 +18,3 @@ float32 poss_rot_atgoal_ccw
 bool can_rotate_to_goal_cw
 bool can_rotate_to_goal_ccw
 bool goal_is_feasable
-

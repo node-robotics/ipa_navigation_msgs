@@ -1,1 +1,0 @@
-HmmCell[] hmmCellArray
