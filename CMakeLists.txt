@@ -22,14 +22,14 @@ add_message_files(
     CompressedMapImage.msg
     Constraint.msg
     Constraints.msg
+    EBand2.msg
     EBand2Bubble.msg
     EBand2Metadata.msg
-    EBand2.msg
     EventTrigger.msg
     LTSNGScan.msg
     LTSNGStatus.msg
-    NavigationZoneList.msg
     NavigationZone.msg
+    NavigationZoneList.msg
     Point2D.msg
     PolygonList.msg
     RecoveryFeedback.msg
@@ -48,8 +48,8 @@ add_service_files(
     CreateTemplateImage.srv
     ExportMap.srv
     FinishMapModification.srv
-    GetLTSNGMapImage.srv
     GetLTSNGMap.srv
+    GetLTSNGMapImage.srv
     GetMarkerArray.srv
     GetZonesMatching.srv
     IsPoseOnPathSegment.srv
