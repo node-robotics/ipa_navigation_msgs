@@ -16,128 +16,60 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   DIRECTORY msg
   FILES
-    AddControlPointsTool.msg
-    AgentPose.msg
     AnnotatedPath.msg
-    AttachedEventTrigger.msg
     AreaProperty.msg
-    BoundedPath.msg
-    CircleFeature.msg
+    AttachedEventTrigger.msg
     CompressedMapImage.msg
-    ConfigFeature.msg
-    ConfigLine.msg
-    ConfigPoint.msg
-    ConfigPoly.msg
-    ConfigPose.msg
     Constraint.msg
     Constraints.msg
-    DrawPathSegmentTool.msg
     EBand2.msg
     EBand2Bubble.msg
     EBand2Metadata.msg
-    EllipticTimeCylinder.msg
     EventTrigger.msg
-    FeatureAssociations.msg
-    FeatureList.msg
-    FeatureSourceConfig.msg
-    GaussianModel.msg
-    HmmCell.msg
-    HmmCellArray.msg
-    HmmCellMap.msg
-    HmmCellPoint.msg
-    HmmOverlayCell.msg
-    HmmServerBackup.msg
-    LineAssociation.msg
-    LineFeature.msg
-    LTSStatus.msg
     LTSNGScan.msg
     LTSNGStatus.msg
-    MergeControlPoints.msg
     NavigationZone.msg
     NavigationZoneList.msg
-    ObstacleMovementPrediction.msg
-    OccupancyGridCell.msg
-    OccupancyGridCellList.msg
-    PathSegment.msg
-    PathSegmentList.msg
-    PathSegmentPanel.msg
-    PathSegmentPrediction.msg
-    PathSegmentPredictionList.msg
     Point2D.msg
-    PointAssociation.msg
-    PointFeature.msg
     PolygonList.msg
-    PoseAssociation.msg
-    PoseFeature.msg
     RecoveryFeedback.msg
-    RemoveControlPointsTool.msg
-    SafetyField.msg
     SideProperty.msg
-    StateEKF.msg
     StateTrajectory.msg
     StateTrajectoryPoint.msg
-    TimedNodePathSegment.msg
-    TimedPathSegmentPrediction.msg
-    TimedPathSegmentPredictionList.msg
     TrajGenInfo.msg
     Twist2D.msg
-    UbiSenseTag.msg
-    UbiSenseTagList.msg
-    PointWithCovarianceStamped.msg
-    PointWithCovariance.msg
-)
-
-add_message_files(
-  DIRECTORY msg/deprecated
-  FILES
-    HmmCellMapDeprecated01.msg
-    HmmCellMapDeprecated02.msg
-    HmmCellMapDeprecated03.msg
-    HmmServerBackupDeprecated01.msg
-    HmmServerBackupDeprecated02.msg
-    HmmServerBackupDeprecated03.msg
+    ZoneLease.msg
 )
 
 add_service_files(
   DIRECTORY srv
   FILES
-    ClearMapWindow.srv
-    ConfigureFeatureSource.srv
-    ConfigureFeatureSourceArray.srv
-    DeregisterAgent.srv
-    GetActiveFeatureSources.srv
-    GetCBSConstraints.srv
-    GetMapDiffInit.srv
-    GetMapFeature.srv
-    GetMarkerArray.srv
-    GetLTSNGMap.srv
-    GetNearestPS.srv
-    GetObstacleDistance.srv
-    GetOccupancyCells.srv
-    GetPathSegments.srv
-    GetPlans.srv
-    GetSafetyField.srv
-    GetZonesMatching.srv
-    InitAgent.srv
+    ComputeDiffMap.srv
+    CreateTemplateImage.srv
+    ExportMap.srv
     FinishMapModification.srv
+    GetLTSNGMap.srv
+    GetLTSNGMapImage.srv
+    GetMarkerArray.srv
+    GetZonesMatching.srv
     IsPoseOnPathSegment.srv
-    MakeLandmarkShot.srv
-    PoseRequest.srv
-    ProcessConfigFeatures.srv
-    RequestSeenCells.srv
-    SetCBSConstraints.srv
+    LoadDiffMap.srv
+    MapTransform.srv
     SetIniPose.srv
     SetIntermediateGoal.srv
     SetMarkerArray.srv
-    SetOdomCovariance.srv
     SplitPath.srv
 )
 
 add_action_files(
   DIRECTORY action
   FILES
+    ComputePathThroughPoses.action
     GlobalActionPlanner.action
+    MonitorRepause.action
     MoveBase.action
+    TemplateDetection.action
+    WaitForLease.action
 )
 
 generate_messages(DEPENDENCIES

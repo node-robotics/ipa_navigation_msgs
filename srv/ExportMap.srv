@@ -9,13 +9,14 @@ uint8 LAYER_TYPE_LW_HR_OCC_2D_GRID = 4
 uint8 TEMPORAL_TYPE_LONG_TERM = 0
 uint8 TEMPORAL_TYPE_STATIC = 1
 
+string input_file_path
+
+# Output resolution for HR_OCC_GRID
+float64 resolution
+
 uint8 layer_type
 uint8 temporal_type
-# Output resolution for HR_OCC_GRID, if output resolution is 0, the existing layer will be returned
-float64 desired_hr_layer_resolution # unit: [m/cell]
-# Slice for 3D NDT layer
-uint8 slice
 ---
-nav_msgs/OccupancyGrid map
+ipa_navigation_msgs/CompressedMapImage image
 bool success
 string message

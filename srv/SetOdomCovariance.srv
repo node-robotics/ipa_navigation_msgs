@@ -1,5 +1,0 @@
-geometry_msgs/Pose2D covariance
----
-bool success
-string err_msg
-

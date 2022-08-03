@@ -14,7 +14,8 @@ geometry_msgs/PoseStamped[] waypoints
 
 # Parameters to apply during the current action
 # This is an application specific ROS Message serialized to a json string and may for example contain tolerances
-# for the goal, applicable recoveries or other constraints.
+# for the goal, used planners and controllers or other settings. The used MBF adapter must support this features.
+# Example value would be '{\"controller\": \"EbandLocalPlanner\", \"translational_goal_tolerance\": 0.1}'
 string parameters
 ---
 #####################

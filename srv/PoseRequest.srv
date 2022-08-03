@@ -1,5 +1,0 @@
-string id
----
-bool success
-string message
-geometry_msgs/PoseWithCovariance pose

@@ -1,4 +1,0 @@
-ipa_navigation_msgs/FeatureSourceConfig cfg
----
-bool success
-string err_msg

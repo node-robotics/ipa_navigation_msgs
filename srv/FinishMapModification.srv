@@ -5,7 +5,8 @@ uint8 ABORT = 1
 # Force mapping and finish Map Modification independent of localization confidence, it will fail if no odometry is available
 uint8 FORCE = 2
 
-uint8 action 
+uint8 action
+bool allow_extension
 ---
 bool success
 string message

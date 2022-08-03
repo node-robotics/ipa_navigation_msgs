@@ -1,3 +1,0 @@
-PoseFeature measurement
-PoseFeature assumption
-float32 confidence

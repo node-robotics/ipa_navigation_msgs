@@ -1,6 +1,0 @@
-float64 resolution
----
-nav_msgs/MapMetaData meta_data
-OccupancyGridCellList cells
-bool success
-string message
