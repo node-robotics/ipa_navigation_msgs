@@ -1,5 +1,8 @@
-# Output resolution for OCC_GRID
-string station_name
+# Region of interest for recording the template w.r.t to robot frame
+geometry_msgs/PolygonStamped bounding_box
+
+# Resolution of the template in meters/pixel. Must be >= 0.001
+float64 resolution
 ---
 ipa_navigation_msgs/CompressedMapImage image
 bool success

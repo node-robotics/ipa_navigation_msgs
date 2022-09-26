@@ -1,4 +1,5 @@
 std_msgs/Header header # frame id of poses, timestamp of controller step the message originated from
+string robot_id # name of the robot
 ipa_navigation_msgs/EBand2Metadata metadata # helper bubble offsets and other metadata
 ipa_navigation_msgs/EBand2Bubble[] bubbles # center bubbles, starting at robot, poses in the frame given in header
 
