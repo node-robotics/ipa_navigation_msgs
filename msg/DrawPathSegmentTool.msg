@@ -1,4 +1,0 @@
-string path_segment_type
-string control_point_name
-string state
-geometry_msgs/Point position

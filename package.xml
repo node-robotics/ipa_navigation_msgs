@@ -4,7 +4,7 @@
   <version>3.0.2</version>
   <description>The ipa_navigation_msgs package holds specific message types for the IPA Navigation</description>
 
-  <maintainer email="srd@ipa.fraunhofer.de">Stefan Dörr</maintainer>
+  <maintainer email="max.beutelspacher@node-robotics.com">Max Beutelspacher</maintainer>
 
   <license>Fraunhofer IPA</license>
 

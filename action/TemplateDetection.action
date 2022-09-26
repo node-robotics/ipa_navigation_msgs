@@ -1,0 +1,10 @@
+# dock mode
+uint8 DOCK_MODE_DOCK = 0
+uint8 DOCK_MODE_UNDOCK = 1
+
+string name
+uint8 dock_mode
+---
+bool success
+---
+bool found_template

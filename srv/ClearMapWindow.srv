@@ -1,4 +1,0 @@
-geometry_msgs/Point[] border_points #if empty, clear the whole map
----
-bool success
-string message
