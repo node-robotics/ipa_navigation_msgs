@@ -41,6 +41,7 @@ add_message_files(
     ZoneLease.msg
 )
 
+
 add_service_files(
   DIRECTORY srv
   FILES
@@ -77,7 +78,7 @@ generate_messages(DEPENDENCIES
   actionlib_msgs
   geometry_msgs
   nav_msgs
-  sensor_msgs 
+  sensor_msgs
   std_msgs
   uuid_msgs
   visualization_msgs
@@ -90,7 +91,7 @@ catkin_package(
     geometry_msgs
     message_runtime
     nav_msgs
-    sensor_msgs 
+    sensor_msgs
     std_msgs
     uuid_msgs
     visualization_msgs
