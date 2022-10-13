@@ -20,6 +20,7 @@ add_message_files(
     AreaProperty.msg
     AttachedEventTrigger.msg
     CompressedMapImage.msg
+    CompressedForces.msg
     Constraint.msg
     Constraints.msg
     EBand2.msg
@@ -69,6 +70,7 @@ add_action_files(
     GlobalActionPlanner.action
     MonitorRepause.action
     MoveBase.action
+    PlanDetour.action
     TemplateDetection.action
     WaitForLease.action
 )
