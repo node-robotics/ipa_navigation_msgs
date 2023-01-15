@@ -1,0 +1,13 @@
+# Track an object pose continuously
+geometry_msgs/PoseWithCovarianceStamped initial_guess
+
+string object_name
+uint32 timeout
+---
+bool success
+
+geometry_msgs/PoseWithCovarianceStamped final_pose
+---
+bool is_detected
+
+geometry_msgs/PoseWithCovarianceStamped pose

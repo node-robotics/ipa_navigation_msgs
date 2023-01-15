@@ -20,6 +20,7 @@ add_message_files(
     AreaProperty.msg
     AttachedEventTrigger.msg
     CompressedMapImage.msg
+    CompressedForces.msg
     Constraint.msg
     Constraints.msg
     EBand2.msg
@@ -46,6 +47,7 @@ add_service_files(
   DIRECTORY srv
   FILES
     ComputeDiffMap.srv
+    ConfigureLTS.srv
     CreateTemplateImage.srv
     ExportMap.srv
     FinishMapModification.srv
@@ -60,6 +62,7 @@ add_service_files(
     SetIntermediateGoal.srv
     SetMarkerArray.srv
     SplitPath.srv
+    Trace.srv
 )
 
 add_action_files(
@@ -69,7 +72,9 @@ add_action_files(
     GlobalActionPlanner.action
     MonitorRepause.action
     MoveBase.action
+    PlanDetour.action
     TemplateDetection.action
+    TrackObjectPose.action
     WaitForLease.action
 )
 

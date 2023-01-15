@@ -4,6 +4,9 @@ uint8 DOCK_MODE_UNDOCK = 1
 
 string name
 uint8 dock_mode
+
+# Initial guess of the template pose in the given frame.
+geometry_msgs/PoseStamped initial_guess
 ---
 bool success
 ---
