@@ -9,6 +9,9 @@ nav_msgs/Path local_plan
 # in global replanning
 geometry_msgs/PoseStamped[] waypoints
 
+# Planner to use; defaults to the first one specified on "planners" parameter
+string planner
+
 ---
 #####################
 # RESULT DEFINITION #

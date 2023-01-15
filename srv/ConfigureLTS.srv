@@ -1,0 +1,40 @@
+#################
+# Mode switch LTS
+#################
+
+# Shuts down localization
+uint8 IDLE            = 0
+
+# Regular operation mode.
+# Attempts to load from_backup from `map_id` and restores pose if available.
+# Falls back to from_static_map using `map`, if the service call contains one
+uint8 LOCALIZING      = 1
+
+# Init mode from_scratch, ignores `map`.
+# Uses `map_id` as the destination for the map.
+uint8 INITIAL_MAPPING = 2
+
+# Extend an existing map (meaning `map_id` must be set).
+# No additional checks regarding prior localization quality are made.
+# If an environment switch is triggered, the map is loaded and LTS waits for an initial pose from the user.
+uint8 MAP_EXTENSION   = 3
+
+# Init mode
+uint8 mode
+
+# Map ID used to identify backups.
+# Usually a UUID. Valid characters are [a-zA-Z0-9_-], or the empty string.
+string map_id
+
+# Optional map to initialize from if there's no backup.
+# Note: this is an ugly hack to model std::optional<> in the message, since not all messages need a map.
+# Will never attempt to use anything but map[0] if not map.empty().
+ipa_navigation_msgs/CompressedMapImage[] map
+
+---
+
+# Whether or not the mode switch succeeded (a no-op is also considered a success)
+bool success
+
+# Additional information about action or failure reason
+string message
