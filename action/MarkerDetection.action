@@ -1,0 +1,59 @@
+###################
+# GOAL DEFINITION #
+###################
+
+# Dictionary of the specified marker id
+# List of implemented Dictionaries. Error if no input
+uint8 ARUCO = 1
+uint8 ARUCO_MIP_25h7 = 2
+uint8 ARUCO_MIP_16h3 = 3
+uint8 ARUCO_MIP_36h12 = 4
+uint8 ARTAG = 5
+uint8 ARTOOLKITPLUS = 6
+uint8 ARTOOLKITPLUSBCH = 7
+uint8 TAG25h7 = 8
+uint8 TAG16h5 = 9
+uint8 TAG25h9 = 10
+uint8 TAG36h10 = 11
+uint8 TAG36h11 = 12
+uint8 CHILITAGS = 13
+uint8 ALL_DICTS = 14
+
+
+uint8 marker_dictionary
+
+
+# ID of the marker to be detected
+# Valid range depends on selected dictionary. Default Value: 0
+# ARUCO : 0-1023
+# ARUCO_MIP_25h7 : 0-99
+# ARUCO_MIP_16h3 : 0-249
+# ARUCO_MIP_36h12 : 0-249
+# ARTAG : 0-2001
+# ARTOOLKITPLUS : 0-511
+# ARTOOLKITPLUSBCH : 0-4095
+# TAG16h5: 0-29 , TAG25h7 : 0-241, TAG25h9 : 0-34, TAG36h11 : 0-586, TAG36h10 : 0-2319
+# CHILITAGS: 0-1023
+# ALL_DICTS : 0-4095
+
+uint16 marker_id
+
+# Size of thr marker in meters. Error if no input
+float32 marker_size
+
+
+---
+#####################
+# RESULT DEFINITION #
+#####################
+
+# Successful detection of marker
+bool success
+
+---
+#######################
+# FEEDBACK DEFINITION #
+#######################
+
+# Marker found
+bool found_marker

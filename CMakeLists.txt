@@ -70,6 +70,7 @@ add_action_files(
   FILES
     ComputePathThroughPoses.action
     GlobalActionPlanner.action
+    MarkerDetection.action
     MonitorRepause.action
     MoveBase.action
     PlanDetour.action
