@@ -1,0 +1,7 @@
+# Define the goal
+string task_id
+---
+bool success
+string message
+---
+string progress # progress

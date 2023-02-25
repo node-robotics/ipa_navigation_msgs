@@ -1,104 +1,64 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(ipa_navigation_msgs)
 
-find_package(catkin REQUIRED COMPONENTS
-  ackermann_msgs
-  actionlib_msgs
-  geometry_msgs
-  message_generation
-  nav_msgs
-  sensor_msgs
-  std_msgs
-  uuid_msgs
-  visualization_msgs
+# Default to C99
+if(NOT CMAKE_C_STANDARD)
+  set(CMAKE_C_STANDARD 99)
+endif()
+
+# Default to C++17
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
+
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+find_package(ament_cmake REQUIRED)
+find_package(builtin_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+
+set(msg_files
+  "action/GetFusedMap.action"
+  "action/PlanDetour.action"
+  "action/TemplateDetection.action"
+  "action/TrackObjectPose.action"
+  "msg/CompressedMapImage.msg"
+  "msg/LTSNGScan.msg"
+  "msg/LTSNGStatus.msg"
+  "srv/ConfigureLTS.srv"
+  "srv/ExportMap.srv"
+  "srv/GetFusedMap.srv"
+  "srv/GetLTSNGMap.srv"
+  "srv/MapTransform.srv"
+  "srv/Trace.srv"
 )
 
-add_message_files(
-  DIRECTORY msg
-  FILES
-    AnnotatedPath.msg
-    AreaProperty.msg
-    AttachedEventTrigger.msg
-    CompressedMapImage.msg
-    CompressedForces.msg
-    Constraint.msg
-    Constraints.msg
-    EBand2.msg
-    EBand2Bubble.msg
-    EBand2Metadata.msg
-    EventTrigger.msg
-    LTSNGScan.msg
-    LTSNGStatus.msg
-    NavigationZone.msg
-    NavigationZoneList.msg
-    Point2D.msg
-    PolygonList.msg
-    RecoveryFeedback.msg
-    SideProperty.msg
-    StateTrajectory.msg
-    StateTrajectoryPoint.msg
-    TrajGenInfo.msg
-    Twist2D.msg
-    ZoneLease.msg
-)
-
-
-add_service_files(
-  DIRECTORY srv
-  FILES
-    ComputeDiffMap.srv
-    ConfigureLTS.srv
-    CreateTemplateImage.srv
-    ExportMap.srv
-    FinishMapModification.srv
-    GetLTSNGMap.srv
-    GetLTSNGMapImage.srv
-    GetMarkerArray.srv
-    GetZonesMatching.srv
-    IsPoseOnPathSegment.srv
-    LoadDiffMap.srv
-    MapTransform.srv
-    SetIniPose.srv
-    SetIntermediateGoal.srv
-    SetMarkerArray.srv
-    SplitPath.srv
-    Trace.srv
-)
-
-add_action_files(
-  DIRECTORY action
-  FILES
-    ComputePathThroughPoses.action
-    GlobalActionPlanner.action
-    MarkerDetection.action
-    MonitorRepause.action
-    MoveBase.action
-    PlanDetour.action
-    TemplateDetection.action
-    TrackObjectPose.action
-    WaitForLease.action
-)
-
-generate_messages(DEPENDENCIES
-  ackermann_msgs
-  actionlib_msgs
-  geometry_msgs
-  nav_msgs
-  sensor_msgs
-  std_msgs
-  uuid_msgs
-  visualization_msgs
-)
-
-catkin_package(
-  CATKIN_DEPENDS
-    ackermann_msgs
-    actionlib_msgs
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${msg_files}
+  DEPENDENCIES
     geometry_msgs
-    message_runtime
     nav_msgs
     sensor_msgs
     std_msgs
-    uuid_msgs
-    visualization_msgs
+  ADD_LINTER_TESTS
 )
+
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  # the following line skips the linter which checks for copyrights
+  # uncomment the line when a copyright and license is not present in all source files
+  set(ament_cmake_copyright_FOUND TRUE)
+  # the following line skips cpplint (only works in a git repo)
+  # uncomment the line when this package is not in a git repo
+  set(ament_cmake_cpplint_FOUND TRUE)
+  ament_lint_auto_find_test_dependencies()
+endif()
+
+ament_export_dependencies(rosidl_default_runtime)
+ament_package()
