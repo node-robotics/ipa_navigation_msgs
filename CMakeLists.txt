@@ -36,6 +36,7 @@ set(msg_files
   "srv/GetFusedMap.srv"
   "srv/GetLTSNGMap.srv"
   "srv/MapTransform.srv"
+  "srv/SetUint8.srv"
   "srv/Trace.srv"
 )
 
