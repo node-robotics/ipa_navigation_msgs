@@ -62,6 +62,7 @@ add_service_files(
     SetIntermediateGoal.srv
     SetMarkerArray.srv
     SplitPath.srv
+    SetUint8.srv
     Trace.srv
 )
 
